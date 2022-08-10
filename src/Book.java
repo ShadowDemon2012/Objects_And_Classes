@@ -42,11 +42,11 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return author.equals(book.author) && bookName.equals(book.bookName);
+        return yearOfPublication == book.yearOfPublication && author.equals(book.author) && bookName.equals(book.bookName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bookName);
+        return Objects.hash(author, yearOfPublication, bookName);
     }
 }

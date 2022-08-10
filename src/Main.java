@@ -3,7 +3,7 @@ public class Main {
         Author authorOfFirstBook = new Author("Лев", "Толстой");
         Author levTolstoy = new Author("Лев", "Толстой");
         Book firstBook = new Book("Война и мир", 1963, authorOfFirstBook);
-        Book firstBookDuplicate = new Book("Война и мир", 1986, authorOfFirstBook);
+        Book firstBookDuplicate = new Book("Война и мир", 1983, authorOfFirstBook);
         Author authorOfSecondBook = new Author("Фёдор", "Достоевский");
         Book secondBook = new Book("Преступление и наказание", 1974, authorOfSecondBook);
         Author newAuthor = new Author("Александр", "Грибоедов");
@@ -14,7 +14,9 @@ public class Main {
         firstBook.setYearOfPublication(1983);
         secondBook.setYearOfPublication(2000);
         System.out.println(firstBook.equals(firstBookDuplicate));
-        System.out.println(secondBook.hashCode());
+        System.out.println(firstBook.hashCode()==firstBookDuplicate.hashCode());
+        System.out.println(firstBook.hashCode());
+        System.out.println(firstBookDuplicate.hashCode());
         printingAllBooks(catalog,newBook);
     }
 
